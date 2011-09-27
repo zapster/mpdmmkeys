@@ -2,7 +2,7 @@
 """
 Licence:
 ========
-    GNOME MMKeys client for mpd
+    Lightweight MPD client enabling GNOME MultiMediaKeys
     Copyright (C) 2011  Josef Eisl <free-software@zapster.cc>
 
     This program is free software: you can redistribute it and/or modify
@@ -76,7 +76,8 @@ class MediaKeyHandler(object):
                 self.client.previous()
  
 def main():
-    configfiles=['mpdmmkeys.cfg', os.path.expanduser('~/mpdmmkeys/mpdmmkeys.cfg')]
+    configfiles=[os.path.dirname(os.path.realpath(__file__)) + '/mpdmmkeys.cfg', 
+                 os.path.expanduser('~/mpdmmkeys/mpdmmkeys.cfg')]
     # configuration object 
     config = ConfigParser.ConfigParser()
     # adding default/commandline values
